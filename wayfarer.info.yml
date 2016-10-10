@@ -1,0 +1,6 @@
+name: Wayfarer
+description: Allows site owner to announce travel plans and set up meetings. 
+package: Custom
+
+type: module
+core: 8.x
