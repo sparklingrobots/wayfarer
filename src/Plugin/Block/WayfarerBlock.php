@@ -100,6 +100,7 @@ class wayfarerBlock extends BlockBase implements BlockPluginInterface {
       '#type' => 'textfield',
       '#title' => $this->t('Where'),
       '#default_value' => isset($config['place']) ? $config['place'] : '',
+      '#required' => TRUE,
       '#description' => $this->t('Where are you traveling?'),
     );
 
