@@ -119,7 +119,6 @@ class wayfarerBlock extends BlockBase implements BlockPluginInterface {
       '#default_value' => isset($config['date2']) ? $config['date2'] : '',
       '#description' => 'When are you leaving?',
     );
-    // @todo Validate dates to ensure they are in the future, and that date2 is after date1.
     // @todo Expire/hide the block when date2 has passed.
 
     $form['wayfarer_block_schedule_link'] = array (
@@ -129,6 +128,18 @@ class wayfarerBlock extends BlockBase implements BlockPluginInterface {
       '#description' => $this->t('Put in a link to the scheduling service you use.'),
     );    
     return $form;
+  }
+
+ /**
+   * {@inheritdoc}
+   */
+  public function blockValidate($form, FormStateInterface $form_state) {
+    // Check is date2 is after date1.
+    $date1 = $form_state->getValue('wayfarer_block_date1');
+    $date2 = $form_state->getValue('wayfarer_block_date2');
+    if ($date2 < $date1) {
+      $form_state->setErrorByName('date', $this->t('The second date must be later than the first, you time traveler.'));
+    }
   }
 
  /**
