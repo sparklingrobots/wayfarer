@@ -100,8 +100,8 @@ class wayfarerBlock extends BlockBase implements BlockPluginInterface {
       '#type' => 'textfield',
       '#title' => $this->t('Where'),
       '#default_value' => isset($config['place']) ? $config['place'] : '',
-      '#required' => TRUE,
       '#description' => $this->t('Where are you traveling?'),
+      '#required' => TRUE,
     );
 
     // Create arrival date form field.
@@ -110,6 +110,8 @@ class wayfarerBlock extends BlockBase implements BlockPluginInterface {
       '#title' => $this->t('Arrival date'),
       '#default_value' => isset($config['date1']) ? $config['date1'] : '',
       '#description' => 'When are you arriving?',
+      '#required' => TRUE,
+
     );
 
     // Create departure date form field.
@@ -118,6 +120,7 @@ class wayfarerBlock extends BlockBase implements BlockPluginInterface {
       '#title' => $this->t('Departure date'),
       '#default_value' => isset($config['date2']) ? $config['date2'] : '',
       '#description' => 'When are you leaving?',
+      '#required' => TRUE,
     );
     // @todo Expire/hide the block when date2 has passed.
 
