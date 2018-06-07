@@ -6,19 +6,17 @@ Code: https://github.com/sparklingrobots/wayfarer
 What Is This?
 -------------
 
-This module creates a "Travel Alert" block. The user can provide their travel 
-destination, arrival date, departure date, and scheduling link to populate 
-the block. This way an individual can easily and quickly offer face-to-face 
-meetings as they travel. 
+This module creates a "Travel Alert" block, and is designed for freelancers
+who travel frequently. The user can provide their travel destination, arrival
+date, departure date, and scheduling link to populate the block. This way an
+individual can easily and quickly offer face-to-face meetings as they travel.
 
-Best practices at this point are to provide a link to a service like Acuity 
-Scheduling where guests can create their own appointment, or to provide a
-contact link so that they may reach out to schedule. 
+Best practices are to provide a link to a service like Acuity Scheduling where
+guests can create their own appointment, or to provide a contact link so that
+they may reach out to schedule.
 
 How To Use The Module
 -----------------------
-
-There are three main ways to interact with the examples in this project:
 
 1. Enable the module.
 
